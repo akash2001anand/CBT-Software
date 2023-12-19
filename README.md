@@ -3,7 +3,7 @@
 ------------------------------------------------------------------------
 - Install dependency with `pip install -r requirements.txt`
 - run django make migrations `python manage.py makemigrations`
-- run django migrations `python manage.py migrations`
+- run django migrations `python manage.py migrate`
 - create django superuser with `python manage.py createsuperuser`
 - run django server with `python manage.py runserver`
 - Test the API as follows

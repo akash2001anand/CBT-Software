@@ -139,17 +139,4 @@ def passcenter(request):
         pass
     return redirect('homepage') 
 
-def test_data(request,pk):
-    test = Test.objects.get(id=pk)
-    serializer = TestSerializer(test)
-    # json_data = JSONRenderer().render(serializer.data)
-    # return HttpResponse(json_data,content_type = 'application/json')
-    return JsonResponse(serializer.data)
-
-def test_list(request):
-    test = Test.objects.all()
-    serializer = TestSerializer(test,many=True)
-    # json_data = JSONRenderer().render(serializer.data)
-    # return HttpResponse(json_data,content_type = 'application/json')
-    return JsonResponse(serializer.data,safe=False)
 
